@@ -1,37 +1,27 @@
 import QtQuick 2.15
 
 Rectangle {
-    id: bg
+    id: animation;
     width: parent.width
     height: parent.height;
-    x: 0;
+    x: parent.x;
     y: parent.y;
-    Rectangle{
-        id: animation;
-        height: parent.height;
-        width: parent.width;
-        x: parent.x;
-        y: parent.y;
-        color: Qt.rgba(0.4, 0.2, 0.15, 0.3)
-        visible: false;
+    visible: false;
 
-        Behavior on y {
-            PropertyAnimation {
-                easing.type: Easing.InCurve;
-                duration: 5000
-            }
-        }
-        Behavior on height {
-            PropertyAnimation {
-                duration: 5000
-            }
+    Behavior on y {
+        PropertyAnimation {
+            easing.type: Easing.OutQuart;
+            duration: 5000
         }
     }
-
-    gradient: Gradient {
-            GradientStop { position: 0.0; color: "black"}
-            GradientStop { position: 1.0; color: "gray"}
+    Behavior on height {
+        PropertyAnimation {
+            duration: 5000
+        }
     }
+    color: "#66d14f4f"
+
+
     states: [
         State{
           name: "show"
