@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>ProductIcon.qml</file>
+        <file>kokis.png</file>
+        <file>ProductMenu.qml</file>
+        <file>Button.qml</file>
+        <file>fanta.png</file>
+        <file>sprite.png</file>
+        <file>pepsi.png</file>
+        <file>BackgroundAnimation.qml</file>
+    </qresource>
+</RCC>
